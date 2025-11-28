@@ -13,6 +13,17 @@ const translations = {
         { title: "Experience", description: "Over 15 years of coaching and instruction experience" }
       ]
     },
+    philosophy: {
+      title: "My Approach",
+      subtitle: "What Makes Every Lesson Count",
+      points: [
+        { title: "Safety First", description: "Proper technique to prevent injuries. CPR certified instructor with age-appropriate progressions for every skill level." },
+        { title: "Joy of Learning", description: "Every lesson should be enjoyable. Positive encouragement and celebrating small wins keeps motivation high." },
+        { title: "Continuous Improvement", description: "Structured skill progression with video analysis and feedback. Track your growth with measurable milestones." },
+        { title: "Personalized Approach", description: "Custom training plans tailored to your goals. Whether casual or competitive, I adapt to your learning style." },
+        { title: "Long-term Development", description: "Building foundations for competition or lifelong recreational enjoyment. Mentorship that goes beyond just technique." }
+      ]
+    },
     tennis: {
       title: "Tennis",
       subtitle: "From Beginner to Champion",
@@ -61,6 +72,17 @@ const translations = {
         { title: "Expérience", description: "Plus de 15 ans d'expérience en coaching et instruction" }
       ]
     },
+    philosophy: {
+      title: "Mon Approche",
+      subtitle: "Ce qui fait la différence à chaque leçon",
+      points: [
+        { title: "Sécurité avant tout", description: "Technique appropriée pour prévenir les blessures. Instructeur certifié RCR avec des progressions adaptées à chaque niveau." },
+        { title: "Plaisir d'apprendre", description: "Chaque leçon doit être agréable. Encouragement positif et célébration des progrès pour maintenir la motivation." },
+        { title: "Amélioration continue", description: "Progression structurée avec analyse vidéo et feedback. Suivez votre croissance avec des objectifs mesurables." },
+        { title: "Approche personnalisée", description: "Plans d'entraînement sur mesure selon vos objectifs. Que ce soit pour le loisir ou la compétition, je m'adapte à votre style." },
+        { title: "Développement à long terme", description: "Construire les bases pour la compétition ou le plaisir récréatif à vie. Un mentorat qui va au-delà de la technique." }
+      ]
+    },
     tennis: {
       title: "Tennis",
       subtitle: "Du débutant au champion",
@@ -107,6 +129,17 @@ const translations = {
         { title: "학력", description: "경북대학교 사범대 체육교육과 졸업 (교육학 부전공)" },
         { title: "CPR 자격", description: "유효한 CPR 자격증 보유" },
         { title: "경력", description: "15년 이상의 코칭 및 강습 경력" }
+      ]
+    },
+    philosophy: {
+      title: "지도 철학",
+      subtitle: "모든 레슨을 특별하게 만드는 것",
+      points: [
+        { title: "안전 최우선", description: "부상 예방을 위한 올바른 기술. CPR 자격 보유 강사가 수준별 맞춤 진도로 지도합니다." },
+        { title: "배움의 즐거움", description: "모든 레슨은 즐거워야 합니다. 긍정적인 격려와 작은 성취의 축하로 동기를 유지합니다." },
+        { title: "지속적인 발전", description: "체계적인 기술 향상과 영상 분석 피드백. 측정 가능한 목표로 성장을 확인하세요." },
+        { title: "개인 맞춤 접근", description: "목표에 맞춘 맞춤형 훈련 계획. 취미든 경기든 학습 스타일에 맞게 지도합니다." },
+        { title: "장기적 성장", description: "경기력 향상이든 평생 취미든 탄탄한 기초를 쌓습니다. 기술을 넘어선 멘토링을 제공합니다." }
       ]
     },
     tennis: {

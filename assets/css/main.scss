@@ -494,6 +494,96 @@ img {
       height: 70px;
     }
   }
+
+  &.ski-pole {
+    color: $primary;
+    opacity: 0.12;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.mountain {
+    color: $primary;
+    opacity: 0.10;
+
+    svg {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  &.snowflake {
+    color: $primary;
+    opacity: 0.12;
+
+    svg {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  &.trophy {
+    color: $secondary;
+    opacity: 0.12;
+
+    svg {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  &.medal {
+    color: $secondary;
+    opacity: 0.10;
+
+    svg {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  &.stopwatch {
+    color: $secondary;
+    opacity: 0.12;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.star {
+    color: $secondary;
+    opacity: 0.10;
+
+    svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &.heart {
+    color: $secondary;
+    opacity: 0.12;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &.target {
+    color: $primary;
+    opacity: 0.10;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 .hero-overlay {
@@ -626,16 +716,6 @@ img {
 .section-alt {
   background: var(--bg-secondary);
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba($white, 0.1), transparent);
-  }
 }
 
 .section-header {
