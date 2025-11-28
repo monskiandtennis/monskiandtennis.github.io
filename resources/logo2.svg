@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; } /* Change to 'none' for transparent */
+      
+      /* M Style */
+      .mountain-stroke { fill: none; stroke: #003366; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* O Style */
+      .tennis-ball { fill: #c0d72f; }
+      .ball-seam { fill: none; stroke: #ffffff; stroke-width: 4; opacity: 0.9; }
+      
+      /* N Style - Skis (Leaning) */
+      .ski { fill: none; stroke: #003366; stroke-width: 14; stroke-linecap: round; }
+      .ski-tip { fill: none; stroke: #003366; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+      .binding { fill: #003366; }
+      
+      /* N Style - Pole */
+      .pole-shaft { stroke: #444; stroke-width: 8; stroke-linecap: round; } 
+      .pole-grip { fill: #003366; }
+      .pole-strap { fill: none; stroke: #003366; stroke-width: 3; }
+      .pole-basket { fill: none; stroke: #003366; stroke-width: 4; }
+      .pole-point { stroke: #003366; stroke-width: 4; }
+
+      /* Text */
+      .text-main { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 800; fill: #003366; letter-spacing: 4px; }
+      .text-sub { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 500; fill: #666; letter-spacing: 1px; font-size: 14px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="350" class="bg" />
+
+  <!-- The "MoN" Graphic Group -->
+  <g transform="translate(110, 80)">
+    
+    <!-- M: Asymmetrical Mountain (High Left) -->
+    <path d="M10,100 L45,10 L80,90 L115,45 L150,100" class="mountain-stroke" />
+
+    <!-- O: Tennis Ball -->
+    <g transform="translate(200, 65)">
+      <circle r="35" class="tennis-ball" />
+      <path d="M-25,18 Q0,38 25,18" class="ball-seam" />
+      <path d="M-25,-18 Q0,-38 25,-18" class="ball-seam" />
+    </g>
+
+    <!-- N: Leaning Skis & Pole -->
+    <g transform="translate(250, 0)">
+      
+      <!-- Left Vertical Ski (Leaning Right) -->
+      <!-- x moves from 15 (bottom) to 25 (top) to create lean -->
+      <line x1="15" y1="100" x2="25" y2="35" class="ski" /> 
+      <path d="M25,35 Q28,15 45,10" class="ski-tip" fill="none" /> 
+      
+      <!-- Binding (Rotated slightly to match ski lean) -->
+      <g transform="translate(18, 60) rotate(10)">
+        <rect x="-6" y="0" width="12" height="15" class="binding" rx="2" />
+      </g>
+
+      <!-- Right Vertical Ski (Leaning Right) -->
+      <line x1="105" y1="100" x2="115" y2="35" class="ski" />
+      <path d="M115,35 Q118,15 135,10" class="ski-tip" fill="none" />
+      
+      <!-- Binding -->
+      <g transform="translate(108, 60) rotate(10)">
+        <rect x="-6" y="0" width="12" height="15" class="binding" rx="2" />
+      </g>
+
+      <!-- The Diagonal Ski Pole -->
+      <!-- Pole connects top-left ski area to bottom-right ski area to form "N" -->
+      <line x1="35" y1="30" x2="100" y2="95" class="pole-shaft" />
+      
+      <!-- Grip & Strap (Top Left) -->
+      <g transform="translate(35, 30) rotate(-40)">
+        <rect x="-6" y="-10" width="12" height="20" class="pole-grip" rx="2" />
+        <path d="M-5,-5 Q-20,5 -5,15" class="pole-strap" />
+      </g>
+      
+      <!-- Basket & Tip (Bottom Right) -->
+      <line x1="92" y1="92" x2="108" y2="82" class="pole-basket" /> 
+      <circle cx="100" cy="87" r="5" fill="none" stroke="#003366" stroke-width="3" />
+      <line x1="100" y1="95" x2="105" y2="100" class="pole-point" />
+      
+    </g>
+    
+  </g>
+
+  <!-- Text Below -->
+  <text x="300" y="240" text-anchor="middle" font-size="42" class="text-main">SKI &amp; TENNIS</text>
+  <text x="300" y="275" text-anchor="middle" class="text-sub">SJ SPORTS SOLUTIONS</text>
+</svg>

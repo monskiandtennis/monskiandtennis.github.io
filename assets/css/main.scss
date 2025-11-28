@@ -462,7 +462,7 @@ img {
 
 .bg-icon {
   position: absolute;
-  opacity: 0.08;
+  opacity: 0.15;
   will-change: transform;
 
   svg {
@@ -472,12 +472,12 @@ img {
 
   &.tennis-ball {
     color: $secondary; // Burnt Orange
-    opacity: 0.06;
+    opacity: 0.12;
   }
 
   &.racket {
     color: $secondary;
-    opacity: 0.05;
+    opacity: 0.10;
 
     svg {
       width: 80px;
@@ -487,7 +487,7 @@ img {
 
   &.ski {
     color: $primary; // Ice Blue
-    opacity: 0.08;
+    opacity: 0.15;
 
     svg {
       width: 70px;
@@ -1183,9 +1183,10 @@ img {
 // FOOTER
 // ==================
 .site-footer {
-  background: $secondary;
+  background: #0a0f1a;
   color: $white;
   padding: 60px 0 40px;
+  border-top: 1px solid rgba($primary, 0.2);
 }
 
 .footer-content {

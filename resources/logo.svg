@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .bg { fill: #f4f4f4; }
+      .text { font-family: Arial, sans-serif; font-weight: bold; fill: #333; }
+      .subtext { font-family: Arial, sans-serif; fill: #666; font-size: 24px; }
+      .mountain { fill: #2c3e50; }
+      .ball { fill: #c0d72f; stroke: #fff; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" class="bg" />
+
+  <!-- Icon Group -->
+  <g transform="translate(150, 120)">
+    <!-- Mountain -->
+    <path class="mountain" d="M100,20 L180,160 H20 Z" />
+    <!-- Tennis Ball (Sun position) -->
+    <circle cx="160" cy="60" r="30" class="ball" />
+    <path d="M135,60 Q160,80 185,60" fill="none" stroke="#fff" stroke-width="2" transform="translate(0,0)"/>
+  </g>
+
+  <!-- Text -->
+  <text x="50%" y="330" text-anchor="middle" font-size="38" class="text">MON SKI &amp; TENNIS</text>
+  <text x="50%" y="370" text-anchor="middle" class="subtext">SJ SPORTS SOLUTIONS</text>
+</svg>
