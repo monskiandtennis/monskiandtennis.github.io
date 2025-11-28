@@ -4,24 +4,49 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Ruby
+# Ruby / Bundler
 *.gem
 .bundle/
-vendor/
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+Gemfile.lock
 
 # Node (if using any npm tools)
 node_modules/
+package-lock.json
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# IDE
+# IDE / Editor
 .idea/
 .vscode/
 *.swp
 *.swo
+*~
+*.sublime-project
+*.sublime-workspace
 
 # Temporary files
 *.log
 *.tmp
+*.bak
+*.orig
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+.sass-cache/
+*.css.map
