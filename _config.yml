@@ -1,0 +1,40 @@
+# Site settings
+title: Montreal Ski and Tennis
+description: Professional Tennis & Ski Instruction in Quebec
+url: "https://monskiandtennis.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Default language
+lang: en
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - resources/
+  - vendor/
+  - node_modules/
+
+# Include hidden files
+include:
+  - _pages
+
+# Collections (if needed later)
+collections_dir: collections
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

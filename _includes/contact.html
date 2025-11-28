@@ -1,0 +1,53 @@
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title" data-i18n="contact.title">Contact Me</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">Ready to Start Your Journey?</p>
+    </div>
+
+    <p class="contact-description" data-aos="fade-up" data-aos-delay="100" data-i18n="contact.description">Get in touch to book lessons or ask any questions. I'm here to help you achieve your athletic goals.</p>
+
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper" data-aos="fade-right" data-aos-delay="200">
+        <form action="https://formspree.io/f/meobvybn" method="POST" class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" data-i18n="contact.form.name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-i18n="contact.form.email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message" data-i18n="contact.form.message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact.form.submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info" data-aos="fade-left" data-aos-delay="300">
+        <div class="contact-card">
+          <h3 data-i18n="contact.kakao_title">KakaoTalk</h3>
+          <p data-i18n="contact.kakao_description">Scan to connect on KakaoTalk</p>
+          <div class="qr-image">
+            <img src="{{ '/assets/images/contact/kakao-id.png' | relative_url }}" alt="KakaoTalk ID" loading="lazy">
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3 data-i18n="contact.qr_title">Ski Course Info</h3>
+          <p data-i18n="contact.qr_description">Scan for ski course details</p>
+          <div class="qr-image">
+            <img src="{{ '/assets/images/contact/ski-qr.jpg' | relative_url }}" alt="Ski Course QR Code" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
