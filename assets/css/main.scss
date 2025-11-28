@@ -516,8 +516,8 @@ img {
 }
 
 .hero-logo {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto 40px;
   object-fit: contain;
   animation: float 6s ease-in-out infinite;
@@ -817,6 +817,130 @@ img {
     color: var(--text-secondary);
     font-size: 1rem;
     line-height: 1.7;
+  }
+}
+
+// ==================
+// PHILOSOPHY SECTION
+// ==================
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  // Center the last row with 2 cards
+  @media (min-width: 993px) {
+    // Make it a 6-column grid for precise centering
+    grid-template-columns: repeat(6, 1fr);
+
+    .philosophy-card {
+      grid-column: span 2;
+    }
+
+    // Position 4th card to start at column 2
+    .philosophy-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    // Position 5th card at column 4
+    .philosophy-card:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+  }
+}
+
+.philosophy-card {
+  background: var(--bg-card);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: $transition;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, $primary, $secondary);
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
+    border-color: rgba($primary, 0.3);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .philosophy-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 0 20px rgba($primary, 0.4);
+    }
+  }
+
+  .philosophy-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, rgba($primary, 0.2), rgba($primary-dark, 0.2));
+    border: 1px solid rgba($primary, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    transition: $transition;
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 992px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    .philosophy-card:nth-child(4),
+    .philosophy-card:nth-child(5) {
+      margin: 0;
+    }
+
+    // Center the last card when odd number
+    .philosophy-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+
+    .philosophy-card:last-child:nth-child(odd) {
+      max-width: 100%;
+    }
   }
 }
 
