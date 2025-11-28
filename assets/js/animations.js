@@ -17,18 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Elements to animate
   const animatedElements = document.querySelectorAll('.section-header, .credential-card, .highlight-item, .gallery-item, .contact-card, .form-group');
-  
+
   animatedElements.forEach((el, index) => {
     // Add staggered delay for grid items
     if (el.classList.contains('credential-card') || el.classList.contains('highlight-item') || el.classList.contains('gallery-item')) {
       el.style.transitionDelay = `${(index % 3) * 0.1}s`;
     }
-    
+
     // Initial state (if not already set in CSS, though it should be)
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    
+
     observer.observe(el);
   });
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // (Though we added .section-header.visible in CSS, others might need it)
   // We'll rely on the inline styles added above for the transition, 
   // and the class addition to trigger the opacity/transform change.
-  
+
   // Override the inline styles when visible
   const styleSheet = document.createElement("style");
   styleSheet.innerText = `
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (scrolled < window.innerHeight) {
       // Parallax for background
       hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
-      
+
       // Parallax for content
       const content = document.querySelector('.hero-content');
       if (content) {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         content.style.opacity = 1 - (scrolled / 700);
       }
     }
-    
+
     // Navbar Glass Effect
     const header = document.querySelector('.site-header');
     if (scrolled > 50) {
@@ -70,6 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       header.classList.remove('scrolled');
     }
+
+    // Background Icons Parallax
+    const bgIcons = document.querySelectorAll('.bg-icon');
+    bgIcons.forEach(icon => {
+      const speed = icon.getAttribute('data-speed');
+      const yPos = -(scrolled * speed);
+      const rotation = scrolled * speed * 0.5;
+      icon.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+    });
   });
 
   // Typing Effect for Hero Title (Optional "Wow" factor)
