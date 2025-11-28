@@ -11,7 +11,6 @@ vendor/bundle/
 vendor/cache/
 vendor/gems/
 vendor/ruby/
-Gemfile.lock
 
 # Node (if using any npm tools)
 node_modules/
