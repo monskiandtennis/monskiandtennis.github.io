@@ -1381,6 +1381,25 @@ img {
       border-radius: 8px;
     }
   }
+
+  .email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: $primary;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: $transition;
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      color: $primary-dark;
+      transform: translateY(-2px);
+    }
+  }
 }
 
 // ==================
