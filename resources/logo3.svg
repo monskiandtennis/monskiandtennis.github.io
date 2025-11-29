@@ -1,81 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380">
   <defs>
     <style>
-      /* Background matches your website hero section: rgba(115, 23, 42, 0.8) */
-      /* In Hex, this is approx #73172A */
-      .bg { fill: #73172A; } 
+      .bg { fill: #ffffff; } /* Change to 'none' for transparent */
       
-      /* COLORS FOR DARK MODE */
-      /* White replaces Navy Blue for high contrast */
-      .primary-white { fill: #ffffff; stroke: #ffffff; } 
-      .primary-white-stroke { fill: none; stroke: #ffffff; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
-      
-      /* Silver replaces Dark Grey for gear shafts */
-      .gear-silver { fill: #cccccc; stroke: #cccccc; } 
-      
-      /* Neon Green stays as is - looks great on dark red */
+      /* COLORS */
+      .primary-blue { fill: #003366; stroke: #003366; } 
+      .gear-grey { fill: #666666; stroke: #666666; } 
       .tennis-ball-color { fill: #c0d72f; } 
-      
-      /* Orange Goggles - Needed a white border to stand out against red */
-      .accent-orange { fill: #ff7f00; stroke: #ffffff; stroke-width: 2; } 
+      .accent-orange { fill: #ff7f00; stroke: #ff7f00; } 
       
       /* GRAPHIC STYLES */
-      .mountain-stroke { fill: none; stroke: #ffffff; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+      .mountain-stroke { fill: none; stroke: #003366; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
       
       /* Racket Styles */
-      .racket-frame { fill: none; stroke: #ffffff; stroke-width: 8; }
-      .racket-throat { fill: none; stroke: #cccccc; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
-      .racket-shaft { fill: #cccccc; }
-      .racket-grip { fill: #ffffff; } 
-      .racket-strings { stroke: #ffffff; stroke-width: 1.5; opacity: 0.3; }
-      .ball-seam { fill: none; stroke: #73172A; stroke-width: 3; opacity: 0.9; } /* Seam matches bg color for cutout effect */
+      .racket-frame { fill: none; stroke: #003366; stroke-width: 8; }
+      .racket-throat { fill: none; stroke: #666666; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .racket-shaft { fill: #666666; }
+      .racket-grip { fill: #003366; } 
+      .racket-strings { stroke: #003366; stroke-width: 1.5; opacity: 0.3; }
+      .ball-seam { fill: none; stroke: #ffffff; stroke-width: 3; opacity: 0.9; }
       
       /* Ski Styles */
-      .ski { fill: none; stroke: #ffffff; stroke-width: 14; stroke-linecap: round; }
-      .ski-tip { fill: none; stroke: #ffffff; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
-      .binding { fill: #ffffff; }
+      .ski { fill: none; stroke: #003366; stroke-width: 14; stroke-linecap: round; }
+      .ski-tip { fill: none; stroke: #003366; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+      .binding { fill: #003366; }
       
       /* Pole Styles */
-      .pole-shaft { stroke: #cccccc; stroke-width: 7; stroke-linecap: round; }
-      .pole-grip { fill: #ffffff; }
-      .pole-strap { fill: none; stroke: #ffffff; stroke-width: 3; }
-      .pole-basket { fill: none; stroke: #ffffff; stroke-width: 3; }
-      .pole-point { stroke: #cccccc; stroke-width: 3; }
+      .pole-shaft { stroke: #666666; stroke-width: 7; stroke-linecap: round; }
+      .pole-grip { fill: #003366; }
+      .pole-strap { fill: none; stroke: #003366; stroke-width: 3; }
+      .pole-basket { fill: none; stroke: #003366; stroke-width: 3; }
+      .pole-point { stroke: #666666; stroke-width: 3; }
 
       /* TEXT STYLES */
-      .text-main { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 800; fill: #ffffff; letter-spacing: 4px; }
-      .text-sub { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 600; fill: #dddddd; letter-spacing: 1.5px; font-size: 15px; }
+      .text-main { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 800; fill: #003366; letter-spacing: 4px; }
+      .text-sub { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 600; fill: #555; letter-spacing: 1.5px; font-size: 15px; }
       
-      /* GOGGLE STYLE (Updated for Dark Mode) */
-      .goggle-lens { fill: #ff7f00; stroke: #ffffff; stroke-width: 1.5; } /* White stroke makes it pop */
-      .goggle-bridge { fill: none; stroke: #ffffff; stroke-width: 1.5; }
-      .goggle-strap { fill: none; stroke: #cccccc; stroke-width: 1.5; }
+      /* NEW GOGGLE STYLE (Sharper) */
+      .goggle-lens { fill: #ff7f00; stroke: #003366; stroke-width: 1; }
+      .goggle-bridge { fill: none; stroke: #003366; stroke-width: 1.5; }
+      .goggle-strap { fill: none; stroke: #444; stroke-width: 1.5; }
     </style>
   </defs>
 
-  <!-- Background Rect (Simulating your website) -->
-  <!-- Remove this line or set opacity to 0 when using on the real site -->
-  <!--rect width="600" height="380" class="bg" /-->
+  <!-- Background -->
+  <rect width="600" height="380" class="bg" />
 
   <!-- The "MoN" Graphic Group -->
   <g transform="translate(80, 80)">
     
     <!-- M: Asymmetrical Mountain -->
+    <!-- Right Peak is at roughly x=115, y=45 -->
     <path d="M10,100 L45,10 L80,90 L115,45 L150,100" class="mountain-stroke" />
 
-    <!-- THE GOGGLES (Above M Right Peak) -->
+    <!-- THE GOGGLES (Moved Above M Right Peak) -->
+    <!-- Peak is x=115. We center goggles there. y=20 places it nicely above the peak (y=45) -->
     <g transform="translate(92, 15)">
+       <!-- Strap Lines (Speed Effect) -->
        <path d="M-2,3 L-8,3 M48,3 L54,3" class="goggle-strap" />
-       <!-- Left Lens -->
+
+       <!-- Left Lens (Wider, Flatter, Sharper) -->
        <path d="M0,3 Q10,-2 22,3 Q22,8 10,9 Q0,8 0,3 Z" class="goggle-lens" />
-       <!-- Reflection Line (White) -->
-       <path d="M4,3 L10,7" stroke="#ffffff" stroke-width="1.5" opacity="0.8" />
+       <!-- Reflection Line (Sharp diagonal) -->
+       <path d="M4,3 L10,7" stroke="#fff" stroke-width="1.5" opacity="0.6" />
+
        <!-- Bridge -->
        <path d="M22,3 L24,3" class="goggle-bridge" />
-       <!-- Right Lens -->
+
+       <!-- Right Lens (Wider, Flatter, Sharper) -->
        <path d="M24,3 Q36,-2 46,3 Q46,8 36,9 Q24,8 24,3 Z" class="goggle-lens" />
        <!-- Reflection Line -->
-       <path d="M28,3 L34,7" stroke="#ffffff" stroke-width="1.5" opacity="0.8" />
+       <path d="M28,3 L34,7" stroke="#fff" stroke-width="1.5" opacity="0.6" />
     </g>
 
     <!-- O: Racket (Leaning) -->
@@ -121,13 +116,13 @@
       </g>
       <g transform="translate(95, 90)">
           <line x1="-8" y1="-2" x2="8" y2="-8" class="pole-basket" /> 
-          <circle cx="0" cy="-5" r="4" fill="none" stroke="#ffffff" stroke-width="2.5" />
+          <circle cx="0" cy="-5" r="4" fill="none" stroke="#003366" stroke-width="2.5" />
           <line x1="0" y1="0" x2="4" y2="4" class="pole-point" />
       </g>
     </g>
   </g>
 
-  <!-- TEXT SECTION (White) -->
+  <!-- TEXT SECTION (Clean & Centered) -->
   <text x="300" y="280" text-anchor="middle" font-size="42" class="text-main">SKI &amp; TENNIS</text>
   <text x="300" y="315" text-anchor="middle" class="text-sub">SJ SPORTS SOLUTIONS</text>
 
